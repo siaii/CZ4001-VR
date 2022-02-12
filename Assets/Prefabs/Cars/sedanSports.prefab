@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7660431243576532598}
   - component: {fileID: 1727271444016468053}
   - component: {fileID: 4692562752683631582}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: sedanSports
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,6 +46,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ba67f23f16ba948877ec94ff31b28a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 10
+  isMoving: 1
+  mask:
+    serializedVersion: 2
+    m_Bits: 192
+  stoppingCenter: {x: 0, y: 0.5, z: 3}
+  stoppingHalfExtents: {x: 0.675, y: 0.2, z: 0.5}
 --- !u!65 &4692562752683631582
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69,6 +76,10 @@ PrefabInstance:
     - target: {fileID: 6965459788114054413, guid: 755299cc70b243c42aa2b310ffc69459, type: 3}
       propertyPath: m_Name
       value: car_smoke
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965459788114054413, guid: 755299cc70b243c42aa2b310ffc69459, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6965459788114054414, guid: 755299cc70b243c42aa2b310ffc69459, type: 3}
       propertyPath: m_RootOrder
@@ -172,9 +183,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8569518100099689332, guid: 6683d06c9d610b547bd34f340955f987, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6899449840304533443, guid: 6683d06c9d610b547bd34f340955f987, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4819223349682164798, guid: 6683d06c9d610b547bd34f340955f987, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1328860500621903259, guid: 6683d06c9d610b547bd34f340955f987, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6683d06c9d610b547bd34f340955f987, type: 3}
       propertyPath: m_Name
       value: sedanSports
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6683d06c9d610b547bd34f340955f987, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2073144646944985114, guid: 6683d06c9d610b547bd34f340955f987, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7626630938287245856, guid: 6683d06c9d610b547bd34f340955f987, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6683d06c9d610b547bd34f340955f987, type: 3}
