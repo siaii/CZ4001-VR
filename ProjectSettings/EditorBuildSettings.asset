@@ -4,5 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/FreeRoamArea.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/OfficePlayArea.unity
+    guid: b58c25e539c7ef14981b210e0a2c5018
+  m_configObjects:
+    Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: b9699838e262f3841b375d982df3aea5, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 6ea957525a422594e8e0ba83a4f58855, type: 2}

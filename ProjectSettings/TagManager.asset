@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - DestroyCar
+  - projectile
+  - FxTemporaire
+  - Stamp
   layers:
   - Default
   - TransparentFX
