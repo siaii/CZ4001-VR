@@ -78,12 +78,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  isMoving: 1
+  enableMovement: 1
   mask:
     serializedVersion: 2
     m_Bits: 192
-  stoppingCenter: {x: 0, y: 0.5, z: 3}
-  stoppingHalfExtents: {x: 0.675, y: 0.2, z: 0.5}
+  stoppingCenter: {x: 0, y: 1, z: 3}
+  stoppingHalfExtents: {x: 1.75, y: 1, z: 1}
 --- !u!65 &8874145683390744643
 BoxCollider:
   m_ObjectHideFlags: 0
