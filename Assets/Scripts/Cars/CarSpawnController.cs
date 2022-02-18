@@ -26,4 +26,13 @@ public class CarSpawnController : MonoBehaviour
             s.EnableSpawning = isSpawningCar;
         }
     }
+
+    public void SetCarSpawning(bool spawning)
+    {
+        isSpawningCar = spawning;
+        foreach (var s in spawners)
+        {
+            s.EnableSpawning = isSpawningCar;
+        }
+    }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,9 +9,14 @@ public class ForestController : MonoBehaviour
 
     private ForestTileState[] tiles;
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         tiles = GetComponentsInChildren<ForestTileState>();
+    }
+
+    void Start()
+    {
+        
     }
 
     // Update is called once per frame
@@ -22,6 +28,7 @@ public class ForestController : MonoBehaviour
     public void UpdateForestState(bool isAlive)
     {
         isForestAlive = isAlive;
+        print(tiles.Length);
         foreach (var tile in tiles)
         {
             tile.SetTileStatus(isForestAlive);

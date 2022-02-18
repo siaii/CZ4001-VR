@@ -10,6 +10,7 @@ public class SceneLoadOnFinish : StateMachineBehaviour
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {   
         _loadingScreen = LoadingScreen.Instance;
+        Debug.Log(LoadingScreen.curLoadBuildIndex);
         var loadOp = SceneManager.LoadSceneAsync(LoadingScreen.curLoadBuildIndex);
         _loadingScreen.WaitForLoadFinish(loadOp);
     }

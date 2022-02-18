@@ -5081,6 +5081,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d5a69b5bda92d419d4f0ed8e0cc3c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CarSpawnController: {fileID: 1937224646}
+  ForestController: {fileID: 1327885601}
+  Litter: {fileID: 613492555}
+  MoreLitter: {fileID: 1607609658}
 --- !u!4 &251423646
 Transform:
   m_ObjectHideFlags: 0
@@ -7702,7 +7706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7687422133940304084, guid: 00f8d25786823434895a040500db990a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00f8d25786823434895a040500db990a, type: 3}
@@ -40895,6 +40899,14 @@ PrefabInstance:
       propertyPath: onHandClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 251423645}
+    - target: {fileID: 4865823679768080344, guid: 243c34e36f1cc64439f904133df3f96d, type: 3}
+      propertyPath: onHandClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadOfficeScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865823679768080344, guid: 243c34e36f1cc64439f904133df3f96d, type: 3}
+      propertyPath: onHandClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FreeRoamController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4865823679768080351, guid: 243c34e36f1cc64439f904133df3f96d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

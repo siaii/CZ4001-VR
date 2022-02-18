@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,9 +12,14 @@ public class ForestTileState : MonoBehaviour
     public bool isTileAlive = true;
     
     private TreeState[] _treeStates;
-    void Start()
+
+    private void Awake()
     {
         _treeStates = treesParent.GetComponentsInChildren<TreeState>();
+    }
+
+    void Start()
+    {
         SetTileStatus(isTileAlive);
     }
 

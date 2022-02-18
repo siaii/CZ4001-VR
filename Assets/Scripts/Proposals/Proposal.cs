@@ -35,8 +35,12 @@ public abstract class Proposal : MonoBehaviour
             happiness *= -1;
         }
 
-        WorldStateData.EnvironmentLevel += Mathf.Clamp(environment, 0, WorldStateData.MaxEnvironmentLevel);
-        WorldStateData.HappinessLevel += Mathf.Clamp(happiness, 0, WorldStateData.MaxHappinessLevel);
+        WorldStateData.EnvironmentLevel += environment;
+        WorldStateData.EnvironmentLevel =
+            Mathf.Clamp(WorldStateData.EnvironmentLevel, 0, WorldStateData.MaxEnvironmentLevel);
+        WorldStateData.HappinessLevel += happiness;
+        WorldStateData.HappinessLevel =
+            Mathf.Clamp(WorldStateData.HappinessLevel, 0, WorldStateData.MaxEnvironmentLevel);
     }
 
     private void OnTriggerEnter(Collider other)
