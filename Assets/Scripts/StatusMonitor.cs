@@ -13,15 +13,15 @@ public class StatusMonitor : MonoBehaviour
     [SerializeField] private Image EnvironmentFill;
     [SerializeField] private Image HappinessFill;
     
-    public float EnvironmentStatusLevel = 5;
-    public float HappinessStatusLevel = 5;
     // Start is called before the first frame update
     void Start()
     {
-        EnvironmentSlider.value = EnvironmentStatusLevel;
-        EnvironmentFill.color = EnvironmentBarColor.Evaluate(EnvironmentStatusLevel / EnvironmentSlider.maxValue);
-        HappinessSlider.value = HappinessStatusLevel;
-        HappinessFill.color = HappinessBarColor.Evaluate(HappinessStatusLevel / HappinessSlider.maxValue);
+        EnvironmentSlider.value = WorldStateData.EnvironmentLevel;
+        EnvironmentSlider.maxValue = WorldStateData.MaxEnvironmentLevel;
+        EnvironmentFill.color = EnvironmentBarColor.Evaluate(WorldStateData.EnvironmentLevel / EnvironmentSlider.maxValue);
+        HappinessSlider.value = WorldStateData.HappinessLevel;
+        HappinessSlider.maxValue = WorldStateData.MaxHappinessLevel;
+        HappinessFill.color = HappinessBarColor.Evaluate(WorldStateData.HappinessLevel / HappinessSlider.maxValue);
     }
 
     // Update is called once per frame

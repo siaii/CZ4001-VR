@@ -8,6 +8,7 @@ TagManager:
   - projectile
   - FxTemporaire
   - Stamp
+  - Proposal
   layers:
   - Default
   - TransparentFX
