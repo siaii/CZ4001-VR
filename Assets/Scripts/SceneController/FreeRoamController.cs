@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SceneController : MonoBehaviour
+public class FreeRoamController : MonoBehaviour
 {
     private LoadingScreen loadingScreen;
     // Start is called before the first frame update

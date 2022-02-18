@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ProposalProcessor : MonoBehaviour
 {
+    [SerializeField] private OfficeController officeController;
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Proposal"))
@@ -13,6 +14,7 @@ public class ProposalProcessor : MonoBehaviour
             if (proposal)
             {
                 proposal.ProcessProposal();
+                officeController.EnableLeaveOffice();
                 Destroy(other.gameObject);
                 print("Cars: " + WorldStateData.isCarProposalApproved);
                 print("Waste: " + WorldStateData.isWasteProposalApproved);
