@@ -118,7 +118,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5830961313535598978
 Transform:
@@ -191,6 +191,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: road_straight
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1f9462e5f38ed8443bd0163f56054443, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f9462e5f38ed8443bd0163f56054443, type: 3}
 --- !u!4 &1067877512530505107 stripped
@@ -256,6 +260,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 73f44316104918c448819074883deb4b, type: 3}
       propertyPath: m_Name
       value: road_straightBarrier
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 73f44316104918c448819074883deb4b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73f44316104918c448819074883deb4b, type: 3}

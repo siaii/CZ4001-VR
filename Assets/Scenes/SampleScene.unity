@@ -2070,7 +2070,8 @@ MonoBehaviour:
   - {fileID: 1727271444016468053, guid: ecb0eb3ee5f915c4abd7647303168580, type: 3}
   - {fileID: -6045370905464618184, guid: b10e3dcd48ce26a45941a0931e5ac930, type: 3}
   - {fileID: 64242349714263958, guid: 0f5bcc561b5c0894faa32698b5d021fd, type: 3}
-  TimeBetweenSpawn: 1
+  MinTimeBetweenSpawn: 1.5
+  MaxTimeBetweenSpawn: 5
   RoadDirection: {x: 1, y: 0, z: 0}
 --- !u!1 &349636616
 GameObject:
@@ -2479,6 +2480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   litter: {fileID: 613492555}
+  moreLitter: {fileID: 0}
 --- !u!1001 &371116292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4087,20 +4089,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e995c12287949344fa7efae23927d541, type: 3}
---- !u!4 &614723966
+--- !u!4 &614723966 stripped
 Transform:
-  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e995c12287949344fa7efae23927d541, type: 3}
   m_PrefabInstance: {fileID: 614723965}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025724354}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1796182987}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &620833726
 GameObject:
   m_ObjectHideFlags: 0
@@ -6772,22 +6765,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 67e754feff2f8db40bf8f0d3c540ae5f, type: 3}
   m_PrefabInstance: {fileID: 1021100183}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1025724354
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e995c12287949344fa7efae23927d541, type: 3}
-  m_PrefabInstance: {fileID: 614723965}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 614723966}
-  m_Layer: 0
-  m_Name: 'cliff_waterfallTop_rock (Missing Prefab with guid: e995c12287949344fa7efae23927d541)'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1001 &1031302912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11986,6 +11963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   litter: {fileID: 1607609658}
+  moreLitter: {fileID: 0}
 --- !u!1001 &1984279778
 PrefabInstance:
   m_ObjectHideFlags: 0

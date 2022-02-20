@@ -49,4 +49,10 @@ public class Car : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = isMoving ? Color.green : Color.red;
+        Gizmos.DrawWireCube(transform.position + stoppingCenter, stoppingHalfExtents*2);
+    }
 }

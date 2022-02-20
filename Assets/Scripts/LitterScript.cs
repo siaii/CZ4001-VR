@@ -5,11 +5,14 @@ using UnityEngine;
 public class LitterScript : MonoBehaviour
 {
 
-    public GameObject litter;
+    [SerializeField] private GameObject litter;
+    [SerializeField] private GameObject moreLitter;
+
+    private int litterLevel = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        UpdateLitterShown();
     }
 
     // Update is called once per frame
@@ -18,15 +21,32 @@ public class LitterScript : MonoBehaviour
         
     }
 
-    public void UpdateLitter(bool isLitter)
+    void UpdateLitterShown()
     {
-        if(litter.activeInHierarchy == true)
+        switch (litterLevel)
         {
-            litter.SetActive(false);
-        }
-        else
-        {
-            litter.SetActive(true);
-        }
+            case 0:
+                litter.SetActive(false);
+                moreLitter.SetActive(false);
+                break;
+            case 1:
+                litter.SetActive(true);
+                moreLitter.SetActive(false);
+                break;
+            case 2:
+                litter.SetActive(true);
+                moreLitter.SetActive(true);
+                break;
+            default:
+                litter.SetActive(true);
+                moreLitter.SetActive(true);
+                break;
+        }       
+    }
+
+    public void SetLitterLevel(float level)
+    {
+        litterLevel = Mathf.RoundToInt(level);
+        UpdateLitterShown();
     }
 }
