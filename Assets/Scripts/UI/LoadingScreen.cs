@@ -19,8 +19,11 @@ public class LoadingScreen : MonoBehaviour
         if (_instance == null)
         {
             _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }else{
+            Destroy(this.gameObject);
         }
-        DontDestroyOnLoad(gameObject);
+        
     }
 
     // Start is called before the first frame update

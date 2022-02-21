@@ -7,7 +7,8 @@ public abstract class Proposal : MonoBehaviour
 {
     [SerializeField] protected float environmentEffect = -3f;
     [SerializeField] protected float happinessEffect = 3f;
-    
+    [SerializeField] private MeshRenderer processRenderer;
+    [SerializeField] private Material acceptedMaterial;
     public bool isApproved
     {
         get;
@@ -47,6 +48,7 @@ public abstract class Proposal : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Stamp"))
         {
+            processRenderer.material = acceptedMaterial;
             print("Proposal Stamped!");
             isApproved = true;
         }
