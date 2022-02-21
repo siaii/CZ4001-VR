@@ -7,14 +7,18 @@ public class BillboardCanvas : MonoBehaviour
 {
     [SerializeField] private GameObject mainCam;
 
-    private void Awake()
+    private void Start()
     {
-        
+        mainCam = GameController.Instance.player;
     }
 
     void LateUpdate()
     {
-        if(mainCam)
-            transform.LookAt(transform.position + Vector3.Normalize(transform.position - mainCam.transform.position) );
+        if (mainCam)
+        {
+            Vector3 pos = new Vector3(mainCam.transform.position.x, transform.position.y, mainCam.transform.position.z);
+            transform.LookAt(transform.position + Vector3.Normalize(transform.position - pos));            
+        }
+
     }
 }

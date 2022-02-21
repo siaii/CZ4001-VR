@@ -28,7 +28,6 @@ public class ForestController : MonoBehaviour
     public void UpdateForestState(bool isAlive)
     {
         isForestAlive = isAlive;
-        print(tiles.Length);
         foreach (var tile in tiles)
         {
             tile.SetTileStatus(isForestAlive);

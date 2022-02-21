@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
 
 public class FreeRoamController : MonoBehaviour
 {
@@ -8,11 +9,14 @@ public class FreeRoamController : MonoBehaviour
     [SerializeField] private ForestController ForestController;
     [SerializeField] private GameObject Litter;
     [SerializeField] private GameObject MoreLitter;
-    private LoadingScreen loadingScreen;
+    private LoadingScreen _loadingScreen;
     // Start is called before the first frame update
     void Start()
     {
-        loadingScreen = LoadingScreen.Instance;
+        if(SteamVR.initializedState == SteamVR.InitializedStates.InitializeSuccess)
+            _loadingScreen = LoadingScreen.InstanceVR;
+        else 
+            _loadingScreen = LoadingScreen.InstanceRegular;
         ProcessWorldState();
     }
 
@@ -33,6 +37,6 @@ public class FreeRoamController : MonoBehaviour
 
     public void LoadOfficeScene()
     {
-        loadingScreen.LoadScene(1);
+        _loadingScreen.LoadScene(1);
     }
 }
