@@ -56,7 +56,7 @@ public class FeedTextBox : MonoBehaviour
     {
         likeTextGameObject.GetComponent<Text>().text = Random.Range(150, 890).ToString();
         retweetTextGameObject.GetComponent<Text>().text = Random.Range(150, 890).ToString();
-        text.text = tweetContent[0,Random.Range(0, tweetContent.Length)];
+        text.text = tweetContent[0,Random.Range(0, tweetContent.GetLength(1))];
     }
 
     // Update is called once per frame
