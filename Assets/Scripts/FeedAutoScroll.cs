@@ -13,10 +13,11 @@ public class FeedAutoScroll : MonoBehaviour
     {
         scrollRect = GetComponent<ScrollRect>();
         //Can be used for auto initializing the text
-        // for (int i = 0; i < 4; ++i)
-        // {
-        //     Instantiate(feedPrefab, content.transform);
-        // }
+        for (int i = 0; i < 20; ++i)
+        {
+            GameObject go = Instantiate(feedPrefab, content.transform);
+        }
+        
     }
 
     // Update is called once per frame
