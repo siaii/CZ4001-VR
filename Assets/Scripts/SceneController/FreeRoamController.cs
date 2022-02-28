@@ -28,7 +28,7 @@ public class FreeRoamController : MonoBehaviour
 
     private void ProcessWorldState()
     {
-        CarSpawnController.SetCarSpawning(WorldStateData.isCarProposalApproved);
+        CarSpawnController.SetCarSpawning();
         //If proposal approved then forest is dead
         ForestController.UpdateForestState(!WorldStateData.isForestProposalApproved);
         Litter.SetActive(!WorldStateData.isWasteProposalApproved);

@@ -6,9 +6,9 @@ public class CarSpawner : MonoBehaviour
 {
     //Spawning bool controlled via editor
     [SerializeField] public bool EnableSpawning = true;
-    [SerializeField] private Car[] CarsPrefabs;
-    [SerializeField] private float MinTimeBetweenSpawn = 1.5f;
-    [SerializeField] private float MaxTimeBetweenSpawn = 5f;
+    [SerializeField] public Car[] CarsPrefabs;
+    [SerializeField] private Vector2 NoProposalSpawnRate;
+    [SerializeField] private Vector2 ApprovedProposalSpawnRate;
     [SerializeField] private Vector3 RoadDirection;
 
     private float timer = 0;
@@ -41,7 +41,15 @@ public class CarSpawner : MonoBehaviour
 
     private void SetSpawnCooldown()
     {
-        spawnCooldown = Random.Range(MinTimeBetweenSpawn, MaxTimeBetweenSpawn);
+        if (WorldStateData.isCarProposalApproved)
+        {
+            spawnCooldown = Random.Range(ApprovedProposalSpawnRate.x, ApprovedProposalSpawnRate.y);
+        }
+        else
+        {
+            spawnCooldown = Random.Range(NoProposalSpawnRate.x, NoProposalSpawnRate.y);
+        }
+            
     }
 
     //Implement object pooling if have enough time and/or performance issues
