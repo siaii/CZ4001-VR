@@ -10,6 +10,7 @@ public class ProposalProcessor : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Proposal"))
         {
+            print(other.gameObject.name);
             Proposal proposal = other.gameObject.GetComponentInChildren<Proposal>();
             if (proposal)
             {

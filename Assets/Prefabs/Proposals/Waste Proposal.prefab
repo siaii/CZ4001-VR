@@ -278,8 +278,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e621097af4d1d4eadc9efa767bfb1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  environmentEffect: 3
-  happinessEffect: -3
+  environmentEffect: 2
+  happinessEffect: -4
   processRenderer: {fileID: 8609778119278252327}
   approvedText: {fileID: 8386113676124452265}
 --- !u!1 &8609778119563630990

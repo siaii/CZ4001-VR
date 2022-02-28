@@ -4,8 +4,8 @@ using UnityEngine;
 
 public static class WorldStateData
 {
-    public static float EnvironmentLevel = 5; 
-    public static float HappinessLevel = 5;
+    public static float EnvironmentLevel = 6; 
+    public static float HappinessLevel = 6;
     public const float MaxEnvironmentLevel = 10;
     public const float MaxHappinessLevel = 10;
 
