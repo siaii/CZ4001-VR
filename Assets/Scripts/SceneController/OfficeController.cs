@@ -19,10 +19,11 @@ public class OfficeController : MonoBehaviour
             _loadingScreen = LoadingScreen.InstanceRegular;
         
         LeaveOfficeCanvas.SetActive(false);
-
+        
         if (WorldStateData.officeVisitIdx < Proposals.Count)
         {
             Instantiate(Proposals[WorldStateData.officeVisitIdx], ProposalLocation.transform.position, ProposalLocation.transform.rotation);    
+            WorldStateData.officeVisitIdx++;
         }
         else
         {
@@ -39,7 +40,6 @@ public class OfficeController : MonoBehaviour
 
     public void LoadFreeRoamScene()
     {
-        WorldStateData.officeVisitIdx++;
         _loadingScreen.LoadScene(0);
     }
 
