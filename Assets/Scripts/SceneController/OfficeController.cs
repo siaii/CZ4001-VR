@@ -40,6 +40,10 @@ public class OfficeController : MonoBehaviour
 
     public void LoadFreeRoamScene()
     {
+        if (WorldStateData.officeVisitIdx >= Proposals.Count)
+        {
+            WorldStateData.enableElection = true;
+        }
         _loadingScreen.LoadScene(0);
     }
 

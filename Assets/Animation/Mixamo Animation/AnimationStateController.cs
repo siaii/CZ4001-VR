@@ -34,11 +34,11 @@ public class AnimationStateController : MonoBehaviour
             animator.SetBool(isHappyHash, true);
         }
         // if w not pressed, go back to idle state
-        if (isHappy && !forwardPressed)
-        {
-            // then set the isHappy boolean to be false
-            animator.SetBool(isHappyHash, false);
-        }
+        // if (isHappy && !forwardPressed)
+        // {
+        //     // then set the isHappy boolean to be false
+        //     animator.SetBool(isHappyHash, false);
+        // }
 
 
         // LOSE ELECTION ANIMATION
@@ -51,10 +51,10 @@ public class AnimationStateController : MonoBehaviour
         }
 
         //if s not pressed, go back to idle state
-        if (isAngry && !backwardPressed)
-        {
-            // then set the isRunning boolean to be true
-            animator.SetBool(isAngryHash, false);
-        }
+        // if (isAngry && !backwardPressed)
+        // {
+        //     // then set the isRunning boolean to be true
+        //     animator.SetBool(isAngryHash, false);
+        // }
     }
 }

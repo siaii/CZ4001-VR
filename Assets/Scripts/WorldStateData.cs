@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WorldStateData
+public static class WorldStateData
 {
     public static float EnvironmentLevel = 5; 
     public static float HappinessLevel = 5;
@@ -14,4 +14,5 @@ public class WorldStateData
     public static bool isWasteProposalApproved = false;
     
     public static int officeVisitIdx = 0;
+    public static bool enableElection = false;
 }

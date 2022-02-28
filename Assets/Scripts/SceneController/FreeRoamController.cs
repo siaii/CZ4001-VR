@@ -37,6 +37,14 @@ public class FreeRoamController : MonoBehaviour
 
     public void LoadOfficeScene()
     {
-        _loadingScreen.LoadScene(1);
+        if (WorldStateData.enableElection)
+        {
+            _loadingScreen.LoadScene(3);
+        }
+        else
+        {
+            //Go to office
+            _loadingScreen.LoadScene(1);
+        }
     }
 }
