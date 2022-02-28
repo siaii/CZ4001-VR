@@ -54,9 +54,10 @@ public class Car : MonoBehaviour
         }
     }
 
+    //To show collision checking box in editor
     private void OnDrawGizmos()
     {
         Gizmos.color = isMoving ? Color.green : Color.red;
-        Gizmos.DrawWireCube(transform.position + Vector3Mult(stoppingCenter, transform.localScale), Vector3Mult(stoppingHalfExtents, transform.localScale)*2);
+        Gizmos.DrawWireCube(transform.position + transform.TransformDirection(Vector3Mult(stoppingCenter, transform.localScale)), Vector3Mult(stoppingHalfExtents, transform.localScale)*2);
     }
 }
