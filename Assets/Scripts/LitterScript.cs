@@ -12,6 +12,14 @@ public class LitterScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (WorldStateData.isWasteProposalApproved)
+        {
+            litterLevel = 0;
+        }
+        else
+        {
+            litterLevel = WorldStateData.EnvironmentLevel <= 5 ? 1 : 2;
+        }
         UpdateLitterShown();
     }
 
