@@ -5,6 +5,8 @@ using Valve.VR;
 
 public class FreeRoamController : MonoBehaviour
 {
+    [SerializeField] private Material GoodSkyboxMat;
+    [SerializeField] private Material BadSkyboxMat;
     [SerializeField] private CarSpawnController CarSpawnController;
     [SerializeField] private ForestController ForestController;
     [SerializeField] private GameObject Litter;
@@ -17,6 +19,16 @@ public class FreeRoamController : MonoBehaviour
             _loadingScreen = LoadingScreen.InstanceVR;
         else 
             _loadingScreen = LoadingScreen.InstanceRegular;
+            
+        if (WorldStateData.EnvironmentLevel <= 4 && BadSkyboxMat)
+        {
+            RenderSettings.skybox = BadSkyboxMat;
+        }
+        else if(GoodSkyboxMat)
+        {
+            RenderSettings.skybox = GoodSkyboxMat;
+        }
+        
         ProcessWorldState();
     }
 

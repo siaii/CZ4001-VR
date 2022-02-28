@@ -5813,6 +5813,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d5a69b5bda92d419d4f0ed8e0cc3c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GoodSkyboxMat: {fileID: 2100000, guid: 123caa41e84e041d0bd65bb3ae888dd1, type: 2}
+  BadSkyboxMat: {fileID: 2100000, guid: 6e00f8b39315691449f256740a5cb862, type: 2}
   CarSpawnController: {fileID: 1937224646}
   ForestController: {fileID: 1327885601}
   Litter: {fileID: 1678447778}
@@ -44994,6 +44996,10 @@ PrefabInstance:
     - target: {fileID: 4865823679263833425, guid: 243c34e36f1cc64439f904133df3f96d, type: 3}
       propertyPath: m_Name
       value: Office Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865823679263833427, guid: 243c34e36f1cc64439f904133df3f96d, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4865823679263833437, guid: 243c34e36f1cc64439f904133df3f96d, type: 3}
       propertyPath: m_Pivot.x

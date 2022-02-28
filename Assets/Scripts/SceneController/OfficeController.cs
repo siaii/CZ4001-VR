@@ -1,11 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using Valve.VR;
 
 public class OfficeController : MonoBehaviour
 {
+    [SerializeField] private Material GoodSkyboxMat;
+    [SerializeField] private Material BadSkyboxMat;
     [SerializeField] private GameObject LeaveOfficeCanvas;
     [SerializeField] private GameObject ProposalLocation;
     [SerializeField] private List<GameObject> Proposals;
@@ -17,6 +20,15 @@ public class OfficeController : MonoBehaviour
             _loadingScreen = LoadingScreen.InstanceVR;
         else 
             _loadingScreen = LoadingScreen.InstanceRegular;
+
+        if (WorldStateData.EnvironmentLevel <= 4 && BadSkyboxMat)
+        {
+            RenderSettings.skybox = BadSkyboxMat;
+        }
+        else if(GoodSkyboxMat)
+        {
+            RenderSettings.skybox = GoodSkyboxMat;
+        }
         
         LeaveOfficeCanvas.SetActive(false);
         

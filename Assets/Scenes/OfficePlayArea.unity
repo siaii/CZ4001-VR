@@ -1316,6 +1316,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 196396863963131449f52bb3e2d8a8b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GoodSkyboxMat: {fileID: 2100000, guid: 123caa41e84e041d0bd65bb3ae888dd1, type: 2}
+  BadSkyboxMat: {fileID: 2100000, guid: 6e00f8b39315691449f256740a5cb862, type: 2}
   LeaveOfficeCanvas: {fileID: 208202546}
   ProposalLocation: {fileID: 106967377}
   Proposals:

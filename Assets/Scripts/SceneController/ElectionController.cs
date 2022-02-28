@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ElectionController : MonoBehaviour
 {
+    [SerializeField] private Material GoodSkyboxMat;
+    [SerializeField] private Material BadSkyboxMat;
     private Animator[] characterAnimators;
 
     private int isHappyHash, isAngryHash;
@@ -14,6 +16,16 @@ public class ElectionController : MonoBehaviour
         isAngryHash = Animator.StringToHash("isAngry");
         characterAnimators = GetComponentsInChildren<Animator>();
         int boolToSet;
+        
+        if (WorldStateData.EnvironmentLevel <= 4 && BadSkyboxMat)
+        {
+            RenderSettings.skybox = BadSkyboxMat;
+        }
+        else if(GoodSkyboxMat)
+        {
+            RenderSettings.skybox = GoodSkyboxMat;
+        }
+        
         if (WorldStateData.EnvironmentLevel > 4 && WorldStateData.HappinessLevel > 5)
         {
             boolToSet = isHappyHash;
