@@ -40,11 +40,28 @@ public class FreeRoamController : MonoBehaviour
 
     private void ProcessWorldState()
     {
-        CarSpawnController.SetCarSpawning();
-        //If proposal approved then forest is dead
-        ForestController.UpdateForestState(!WorldStateData.isForestProposalApproved);
-        Litter.SetActive(!WorldStateData.isWasteProposalApproved);
-        MoreLitter.SetActive(!WorldStateData.isWasteProposalApproved && WorldStateData.EnvironmentLevel<5);
+        //Null checks
+        if (CarSpawnController)
+        {
+            CarSpawnController.SetCarSpawning();
+        }
+
+        if (ForestController)
+        {
+            //If proposal approved then forest is dead
+            ForestController.UpdateForestState(!WorldStateData.isForestProposalApproved);            
+        }
+
+        if (Litter)
+        {
+            Litter.SetActive(!WorldStateData.isWasteProposalApproved);
+        }
+
+        if (MoreLitter)
+        {
+            MoreLitter.SetActive(!WorldStateData.isWasteProposalApproved && WorldStateData.EnvironmentLevel<5);            
+        }
+
     }
 
     public void LoadOfficeScene()
