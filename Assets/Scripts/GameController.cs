@@ -8,7 +8,6 @@ public class GameController : MonoBehaviour
 {
     [SerializeField] private GameObject Player;
     [SerializeField] private int firstSceneIndex = 0;
-    private static int officeVisitIdx = 0;
 
     private LoadingScreen _loadingScreen;
     private static GameController _instance;
@@ -48,7 +47,7 @@ public class GameController : MonoBehaviour
                 _loadingScreen = LoadingScreen.InstanceRegular;
 
 
-            _loadingScreen.LoadScene(0);
+            _loadingScreen.LoadScene(firstSceneIndex);
             init = true;
         }
     }

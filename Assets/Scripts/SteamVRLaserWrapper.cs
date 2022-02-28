@@ -23,7 +23,6 @@ public class SteamVRLaserWrapper : MonoBehaviour
             return;
         }
  
- 
         clickHandler.OnPointerClick(new PointerEventData(EventSystem.current));
     }
  

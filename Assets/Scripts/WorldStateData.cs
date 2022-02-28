@@ -12,4 +12,6 @@ public class WorldStateData
     public static bool isCarProposalApproved = false;
     public static bool isForestProposalApproved = false;
     public static bool isWasteProposalApproved = false;
+    
+    public static int officeVisitIdx = 0;
 }
