@@ -41,7 +41,14 @@ public class OfficeController : MonoBehaviour
         {
             throw new IndexOutOfRangeException();
         }
+
+        foreach (var honks in FindObjectsOfType<OfficeHonks>())
+        {
+            honks.isEnabled = WorldStateData.isCarProposalApproved;
+        }
+
         
+
     }
 
     // Update is called once per frame
