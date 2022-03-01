@@ -54,13 +54,6 @@ public class OfficeController : MonoBehaviour
         ForestController.UpdateForestState(!WorldStateData.isForestProposalApproved);
 
         LeaveOfficeCanvas.SetActive(false);
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void LoadFreeRoamScene()

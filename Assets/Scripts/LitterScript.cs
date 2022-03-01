@@ -18,15 +18,9 @@ public class LitterScript : MonoBehaviour
         }
         else
         {
-            litterLevel = WorldStateData.EnvironmentLevel <= 5 ? 1 : 2;
+            litterLevel = WorldStateData.EnvironmentLevel > 5 ? 1 : 2;
         }
         UpdateLitterShown();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void UpdateLitterShown()

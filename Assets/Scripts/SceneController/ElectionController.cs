@@ -29,7 +29,8 @@ public class ElectionController : MonoBehaviour
         {
             RenderSettings.skybox = GoodSkyboxMat;
         }
-        //Set people's animation
+        
+        //Set people's animation and win/lose text
         if (WorldStateData.EnvironmentLevel > 4 && WorldStateData.HappinessLevel > 5)
         {
             boolToSet = isHappyHash;

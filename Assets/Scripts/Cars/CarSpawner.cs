@@ -7,8 +7,8 @@ public class CarSpawner : MonoBehaviour
     //Spawning bool controlled via editor
     [SerializeField] public bool EnableSpawning = true;
     [SerializeField] public Car[] CarsPrefabs;
-    [SerializeField] private Vector2 NoProposalSpawnRate;
-    [SerializeField] private Vector2 ApprovedProposalSpawnRate;
+    [SerializeField] private Vector2 NoProposalSpawnInterval;
+    [SerializeField] private Vector2 ApprovedProposalSpawnInterval;
     [SerializeField] private Vector3 RoadDirection;
 
     private float timer = 0.5f;
@@ -43,20 +43,19 @@ public class CarSpawner : MonoBehaviour
     {
         if (WorldStateData.isCarProposalApproved)
         {
-            spawnCooldown = Random.Range(ApprovedProposalSpawnRate.x, ApprovedProposalSpawnRate.y);
+            spawnCooldown = Random.Range(ApprovedProposalSpawnInterval.x, ApprovedProposalSpawnInterval.y);
         }
         else
         {
-            spawnCooldown = Random.Range(NoProposalSpawnRate.x, NoProposalSpawnRate.y);
+            spawnCooldown = Random.Range(NoProposalSpawnInterval.x, NoProposalSpawnInterval.y);
         }
-            
     }
 
     //Implement object pooling if have enough time and/or performance issues
     public void SpawnCar()
     {
         var prefab = CarsPrefabs[Random.Range(0, CarsPrefabs.Length)].gameObject;
-        var instance = Instantiate(prefab, transform.position, Quaternion.LookRotation(RoadDirection));
+        Instantiate(prefab, transform.position, Quaternion.LookRotation(RoadDirection));
     }
 
     private void CheckSpawnValid()

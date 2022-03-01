@@ -7,7 +7,6 @@ public abstract class Proposal : MonoBehaviour
 {
     [SerializeField] protected float environmentEffect = -3f;
     [SerializeField] protected float happinessEffect = 3f;
-    [SerializeField] private MeshRenderer processRenderer;
     [SerializeField] private GameObject approvedText;
     public bool isApproved
     {
@@ -18,12 +17,6 @@ public abstract class Proposal : MonoBehaviour
     void Start()
     {
         approvedText.SetActive(false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public virtual void ProcessProposal()

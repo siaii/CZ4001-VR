@@ -23,12 +23,6 @@ public class ForestTileState : MonoBehaviour
         SetTileStatus(isTileAlive);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void SetTileStatus(bool isAlive)
     {
         isTileAlive = isAlive;

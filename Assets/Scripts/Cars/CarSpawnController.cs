@@ -8,20 +8,14 @@ public class CarSpawnController : MonoBehaviour
     [SerializeField] private Transform[] StartSpawnPoints;
     [SerializeField] public Car[] CarsPrefabs;
     private bool isSpawningCar = false;
+    
     // Start is called before the first frame update
     void Start()
     {
-        //Initialize based on accepted policy
         foreach (var s in spawners)
         {
             s.CarsPrefabs = CarsPrefabs;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void ToggleCarSpawning()

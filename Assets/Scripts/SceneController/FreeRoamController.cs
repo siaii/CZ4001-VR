@@ -30,16 +30,10 @@ public class FreeRoamController : MonoBehaviour
             RenderSettings.skybox = GoodSkyboxMat;
         }
         
-        ProcessWorldState();
+        InitializeWorldState();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void ProcessWorldState()
+    private void InitializeWorldState()
     {
         //Null checks
         if (CarSpawnController)
@@ -52,17 +46,6 @@ public class FreeRoamController : MonoBehaviour
             //If proposal approved then forest is dead
             ForestController.UpdateForestState(!WorldStateData.isForestProposalApproved);            
         }
-
-        if (Litter)
-        {
-            Litter.SetActive(!WorldStateData.isWasteProposalApproved);
-        }
-
-        if (MoreLitter)
-        {
-            MoreLitter.SetActive(!WorldStateData.isWasteProposalApproved && WorldStateData.EnvironmentLevel<5);            
-        }
-
     }
 
     public void LoadOfficeScene()

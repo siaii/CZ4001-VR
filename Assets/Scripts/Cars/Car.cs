@@ -16,10 +16,9 @@ public class Car : MonoBehaviour
     [SerializeField] private Vector3 stoppingHalfExtents;
     
     private bool isMoving = true;
-
     private AudioSource audioSource;
-
     private float honkCooldown = 1.5f;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -52,7 +51,9 @@ public class Car : MonoBehaviour
     void CheckFrontCollision()
     {
         gameObject.layer = LayerMask.NameToLayer("Default");
-        var collision = Physics.OverlapBox(transform.position + transform.TransformDirection(Vector3Mult(stoppingCenter, transform.localScale)), Vector3Mult(stoppingHalfExtents, transform.localScale), Quaternion.identity, mask.value);
+        var collision = Physics.OverlapBox(transform.position + transform.TransformDirection(
+            Vector3Mult(stoppingCenter, transform.localScale)), Vector3Mult(stoppingHalfExtents, transform.localScale), 
+            Quaternion.identity, mask.value);
         
         isMoving = collision.Length <= 0;
         

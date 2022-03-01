@@ -23,10 +23,4 @@ public class StatusMonitor : MonoBehaviour
         HappinessSlider.maxValue = WorldStateData.MaxHappinessLevel;
         HappinessFill.color = HappinessBarColor.Evaluate(WorldStateData.HappinessLevel / HappinessSlider.maxValue);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

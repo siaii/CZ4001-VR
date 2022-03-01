@@ -15,12 +15,6 @@ public class TreeState : MonoBehaviour
         ShowTreeState();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void ShowTreeState()
     {
         fullTree.SetActive(isTreeAlive);

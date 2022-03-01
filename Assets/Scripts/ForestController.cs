@@ -14,17 +14,6 @@ public class ForestController : MonoBehaviour
         tiles = GetComponentsInChildren<ForestTileState>();
     }
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void UpdateForestState(bool isAlive)
     {
         //Update all forest tiles
