@@ -16,7 +16,7 @@ public class ElectionController : MonoBehaviour
         isAngryHash = Animator.StringToHash("isAngry");
         characterAnimators = GetComponentsInChildren<Animator>();
         int boolToSet;
-        
+        //Set skybox material
         if (WorldStateData.EnvironmentLevel <= 4 && BadSkyboxMat)
         {
             RenderSettings.skybox = BadSkyboxMat;
@@ -25,7 +25,7 @@ public class ElectionController : MonoBehaviour
         {
             RenderSettings.skybox = GoodSkyboxMat;
         }
-        
+        //Set people's animation
         if (WorldStateData.EnvironmentLevel > 4 && WorldStateData.HappinessLevel > 5)
         {
             boolToSet = isHappyHash;

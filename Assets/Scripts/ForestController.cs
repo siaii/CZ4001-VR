@@ -27,6 +27,7 @@ public class ForestController : MonoBehaviour
 
     public void UpdateForestState(bool isAlive)
     {
+        //Update all forest tiles
         isForestAlive = isAlive;
         foreach (var tile in tiles)
         {

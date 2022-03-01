@@ -19,20 +19,20 @@ public class AnimationStateController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool isHappy = animator.GetBool("isHappy");
-        bool isAngry = animator.GetBool("isAngry");
-
-        bool forwardPressed = Input.GetKey("w");
-        bool backwardPressed = Input.GetKey("s");
+        // bool isHappy = animator.GetBool("isHappy");
+        // bool isAngry = animator.GetBool("isAngry");
+        //
+        // bool forwardPressed = Input.GetKey("w");
+        // bool backwardPressed = Input.GetKey("s");
 
         // WIN ELECTION ANIMATIION
 
         // press w to start cheering animation
-        if (!isHappy && forwardPressed)
-        {
-            // then set the isHappy boolean to be true
-            animator.SetBool(isHappyHash, true);
-        }
+        // if (!isHappy && forwardPressed)
+        // {
+        //     // then set the isHappy boolean to be true
+        //     animator.SetBool(isHappyHash, true);
+        // }
         // if w not pressed, go back to idle state
         // if (isHappy && !forwardPressed)
         // {
@@ -44,11 +44,11 @@ public class AnimationStateController : MonoBehaviour
         // LOSE ELECTION ANIMATION
 
         // press s to start dissapointed animation
-        if (!isAngry && backwardPressed)
-        {
-            // then set the isAngry boolean to be true
-            animator.SetBool(isAngryHash, true);
-        }
+        // if (!isAngry && backwardPressed)
+        // {
+        //     // then set the isAngry boolean to be true
+        //     animator.SetBool(isAngryHash, true);
+        // }
 
         //if s not pressed, go back to idle state
         // if (isAngry && !backwardPressed)

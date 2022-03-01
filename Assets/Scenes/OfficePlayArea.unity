@@ -3295,6 +3295,7 @@ MonoBehaviour:
   GoodSkyboxMat: {fileID: 2100000, guid: 123caa41e84e041d0bd65bb3ae888dd1, type: 2}
   BadSkyboxMat: {fileID: 2100000, guid: 6e00f8b39315691449f256740a5cb862, type: 2}
   LeaveOfficeCanvas: {fileID: 208202546}
+  ForestController: {fileID: 519480701}
   ProposalLocation: {fileID: 106967377}
   Proposals:
   - {fileID: 6231667905426975728, guid: 6c34dea977817384c834a742bb156b0e, type: 3}

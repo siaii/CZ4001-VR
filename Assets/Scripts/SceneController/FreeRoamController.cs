@@ -19,7 +19,8 @@ public class FreeRoamController : MonoBehaviour
             _loadingScreen = LoadingScreen.InstanceVR;
         else 
             _loadingScreen = LoadingScreen.InstanceRegular;
-            
+        
+        //Set skybox material
         if (WorldStateData.EnvironmentLevel <= 4 && BadSkyboxMat)
         {
             RenderSettings.skybox = BadSkyboxMat;

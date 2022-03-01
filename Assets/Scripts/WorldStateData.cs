@@ -4,6 +4,7 @@ using UnityEngine;
 
 public static class WorldStateData
 {
+    //Static class to keep track of data between scenes
     public static float EnvironmentLevel = 6; 
     public static float HappinessLevel = 6;
     public const float MaxEnvironmentLevel = 10;

@@ -10,13 +10,13 @@ public class ProposalProcessor : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Proposal"))
         {
-            print(other.gameObject.name);
             Proposal proposal = other.gameObject.GetComponentInChildren<Proposal>();
             if (proposal)
             {
                 proposal.ProcessProposal();
                 officeController.EnableLeaveOffice();
                 Destroy(other.gameObject);
+                
                 print("Cars: " + WorldStateData.isCarProposalApproved);
                 print("Waste: " + WorldStateData.isWasteProposalApproved);
                 print("Forest: " + WorldStateData.isForestProposalApproved);

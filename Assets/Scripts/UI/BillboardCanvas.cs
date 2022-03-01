@@ -19,10 +19,5 @@ public class BillboardCanvas : MonoBehaviour
             Vector3 pos = new Vector3(mainCam.transform.position.x, transform.position.y, mainCam.transform.position.z);
             transform.LookAt(transform.position + Vector3.Normalize(transform.position - pos));            
         }
-        else
-        {
-            print("a");
-        }
-
     }
 }
