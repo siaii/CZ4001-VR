@@ -11,7 +11,7 @@ public class CarSpawner : MonoBehaviour
     [SerializeField] private Vector2 ApprovedProposalSpawnRate;
     [SerializeField] private Vector3 RoadDirection;
 
-    private float timer = 0;
+    private float timer = 0.5f;
 
     private float spawnCooldown;
     //Spawning bool controlled via code
