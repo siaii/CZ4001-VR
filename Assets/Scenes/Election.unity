@@ -2344,6 +2344,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1ccdcbec49a165488062cf4511261b3, type: 3}
+--- !u!1 &1832268462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5076332437105529903, guid: c1ccdcbec49a165488062cf4511261b3, type: 3}
+  m_PrefabInstance: {fileID: 1832268461}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1832268463 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1011453197722141486, guid: c1ccdcbec49a165488062cf4511261b3, type: 3}
+  m_PrefabInstance: {fileID: 1832268461}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1839489401 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6648374242276245160, guid: c74459bedc5f2b643a865bf0f8d2dc3d, type: 3}
@@ -2605,6 +2615,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GoodSkyboxMat: {fileID: 2100000, guid: 123caa41e84e041d0bd65bb3ae888dd1, type: 2}
   BadSkyboxMat: {fileID: 2100000, guid: 6e00f8b39315691449f256740a5cb862, type: 2}
+  WinText: {fileID: 1832268463}
+  LoseText: {fileID: 1832268462}
 --- !u!1001 &2014822225
 PrefabInstance:
   m_ObjectHideFlags: 0

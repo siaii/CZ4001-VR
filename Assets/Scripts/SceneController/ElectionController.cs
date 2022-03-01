@@ -6,6 +6,10 @@ public class ElectionController : MonoBehaviour
 {
     [SerializeField] private Material GoodSkyboxMat;
     [SerializeField] private Material BadSkyboxMat;
+
+    [SerializeField] private GameObject WinText;
+    [SerializeField] private GameObject LoseText;
+    
     private Animator[] characterAnimators;
 
     private int isHappyHash, isAngryHash;
@@ -29,10 +33,14 @@ public class ElectionController : MonoBehaviour
         if (WorldStateData.EnvironmentLevel > 4 && WorldStateData.HappinessLevel > 5)
         {
             boolToSet = isHappyHash;
+            WinText.SetActive(true);
+            LoseText.SetActive(false);
         }
         else
         {
             boolToSet = isAngryHash;
+            WinText.SetActive(false);
+            LoseText.SetActive(true);
         }
         foreach (var animator in characterAnimators)
         {
