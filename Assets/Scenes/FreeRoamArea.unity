@@ -5091,7 +5091,7 @@ MonoBehaviour:
   - {fileID: -6045370905464618184, guid: b10e3dcd48ce26a45941a0931e5ac930, type: 3}
   - {fileID: 64242349714263958, guid: 0f5bcc561b5c0894faa32698b5d021fd, type: 3}
   NoProposalSpawnRate: {x: 3, y: 6}
-  ApprovedProposalSpawnRate: {x: 1, y: 2.5}
+  ApprovedProposalSpawnRate: {x: 1, y: 2}
   RoadDirection: {x: -1, y: 0, z: 0}
 --- !u!1001 &227901642
 PrefabInstance:
@@ -7339,7 +7339,7 @@ MonoBehaviour:
   - {fileID: -6045370905464618184, guid: b10e3dcd48ce26a45941a0931e5ac930, type: 3}
   - {fileID: 64242349714263958, guid: 0f5bcc561b5c0894faa32698b5d021fd, type: 3}
   NoProposalSpawnRate: {x: 3, y: 6}
-  ApprovedProposalSpawnRate: {x: 1, y: 2.5}
+  ApprovedProposalSpawnRate: {x: 1, y: 2}
   RoadDirection: {x: 1, y: 0, z: 0}
 --- !u!1001 &342653920
 PrefabInstance:
